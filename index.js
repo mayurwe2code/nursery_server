@@ -52,6 +52,9 @@ connection.query("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROU
   }
 });
 
+app.get("/", function (req, res) {
+  res.send({ "name": "mayur" })
+})
 app.use(productRouter, cartRouter, userRouter, orderRouter, notificationRouter, product_images_router, filter_list_router, vendor_router, delivery_router, adminRouter);
 // 
 
